@@ -20,4 +20,6 @@ Useage:
 
 `mks folder_name` will create a folder with whatever word you put in place of folder_name, navigate to that folder and open your text editor.
 
-`mks folder_name jq us bb` will do the same as above, but download and link the libraries you tell it to. It is very flexible with library names, ie jQuery (or any case variation thereof) and the shorthand of jq work interchangeably, it also accepts an unlimited number of parameters.
+`mks folder_name jq us bb` will do the same as above, but download and link the libraries you tell it to (in this case, jQuery, Underscore and Backbone). 
+
+It is very flexible with library names, ie jQuery (or any case variation thereof) and the shorthand of jq work interchangeably, it also accepts an unlimited number of parameters.

@@ -93,7 +93,7 @@ mks () {
   </body>
   </html>" >> index.html
 
-   open -a "Sublime Text 2" . index.html
+   open -a "Atom" . index.html
 
   echo "File generation complete."
   echo "-------------------------------------"

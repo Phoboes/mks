@@ -16,10 +16,8 @@ mks () {
     cd $1
     echo $1  "folder has been created."
   fi
-  mkdir js 
-  touch js/main.js 
-  mkdir css 
-  touch css/style.css
+  mkdir js css
+  touch css/style.css js/main.js 
   printf "<!DOCTYPE html>
   <html lang=\"en\">
   <head>

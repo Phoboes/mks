@@ -1,7 +1,3 @@
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
 mks () { 
    echo "-------------------------------------"
    if [[ -d "$1" ]];
@@ -16,8 +12,9 @@ mks () {
     cd $1
     echo $1  "folder has been created."
   fi
+  
   mkdir js css
-  touch css/style.css js/main.js 
+  touch css/style.css js/main.js
   printf "<!DOCTYPE html>
   <html lang=\"en\">
   <head>
@@ -60,23 +57,28 @@ mks () {
         echo "-------------------------------------";;
 
         ("reactdom" | "rctdm" | "dom" | "rdom") echo "ReactDOM v1.5 added.";
-       curl https://unpkg.com/react-dom@15/dist/react-dom.js > js/React.js;
+        curl https://unpkg.com/react-dom@15/dist/react-dom.js > js/React.js;
         printf "\n\t\t\t<script src=\"js/React.js\"></script>" >> index.html;
         echo "-------------------------------------";;
 
         ("redux") echo "Redux v3.6 added."; 
         curl https://cdnjs.cloudflare.com/ajax/libs/redux/3.6.0/redux.min.js > js/redux.js;
-         printf "\n\t\t\t<script src=\"js/redux.js\"></script>" >> index.html;
-         echo "-------------------------------------";;
+        printf "\n\t\t\t<script src=\"js/redux.js\"></script>" >> index.html;
+        echo "-------------------------------------";;
 
-        ("ember" | "embr") echo "Ember v 2.11 added."; 
+        ("ember" | "mbr") echo "Ember v 2.11 added."; 
         curl https://cdnjs.cloudflare.com/ajax/libs/ember.js/2.11.2/ember.min.js > js/ember.js;
-         printf "\n\t\t\t<script src=\"js/ember.js\"></script>" >> index.html;
-         echo "-------------------------------------";;
+        printf "\n\t\t\t<script src=\"js/ember.js\"></script>" >> index.html;
+        echo "-------------------------------------";;
+
+        ("paper" | "pjs" | "paperjs") echo "PaperJS v 0.10.3 added."; 
+        curl https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.10.3/paper-full.min.js >> js/paper.js
+        printf "\n\t\t\t<script src=\"js/paper.js\"></script>" >> index.html;
+        echo "-------------------------------------";;
 
         ("vue") echo "Vue v 2.11 added."; 
         curl https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.1/vue.min.js > js/vue.js
-         printf "\n\t\t\t<script src=\"js/vue.js\"></script>" >> index.html;;
+        printf "\n\t\t\t<script src=\"js/vue.js\"></script>" >> index.html;;
         (*) echo "Unknown library.";
         echo "-------------------------------------";;
       esac
@@ -90,6 +92,7 @@ mks () {
 
   </body>
   </html>" >> index.html
+
 
    open -a "Atom" . index.html
 

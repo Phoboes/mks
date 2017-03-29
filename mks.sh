@@ -26,8 +26,8 @@ mks () {
   do
   shopt -s nocasematch
       case "$var" in
-        ("jq" | "jQuery") echo "Jquery v3.1.1 added."; 
-        curl https://code.jquery.com/jquery-3.1.1.slim.min.js > js/jQuery.js;
+        ("jq" | "jQuery") echo "Jquery v3.2.1 added."; 
+        curl https://code.jquery.com/jquery-3.2.1.js > js/jQuery.js;
         printf "\n\t\t\t<script src=\"js/jQuery.js\"></script>" >> index.html;
         echo "-------------------------------------";;
 

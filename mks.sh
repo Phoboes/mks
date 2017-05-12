@@ -22,10 +22,10 @@ mks () {
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
     <title>Document</title>" >> index.html
      
-  for var in ${@:2}
+  for ((i=2;i<=$#;i++))
   do
   shopt -s nocasematch
-      case "$var" in
+      case ${!i} in
         ("jq" | "jQuery") echo "Jquery v3.2.1 added."; 
         curl https://code.jquery.com/jquery-3.2.1.js > js/jQuery.js;
         printf "\n\t\t\t<script src=\"js/jQuery.js\"></script>" >> index.html;

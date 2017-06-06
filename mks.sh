@@ -1,30 +1,3 @@
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-pServe (){
-  echo "-------------------------------------"
-  echo "python -m SimpleHTTPServer"
-  echo "-------------------------------------"
-
-  if [[ "$1" ]]
-    then
-      python -m SimpleHTTPServer $1
-  else
-      python -m SimpleHTTPServer
-  fi
-  
-}
-
-
-say_repeat () {
-  for ((i=1; i<=$1; i++))
-  do
-    say $3
-    sleep $((i * $2))
-  done
-}
-
 mks () { 
    echo "-------------------------------------"
    if [[ -d "$1" ]];
@@ -127,7 +100,7 @@ mks () {
   </body>
 </html>" >> index.html
 
-   open -a "atom ." . index.html
+   open -a "atom" . index.html
 
   echo "File generation complete."
   echo "-------------------------------------"

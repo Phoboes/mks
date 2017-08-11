@@ -28,93 +28,93 @@ mks () {
   do
   shopt -s nocasematch
       case ${!i} in
-        ("jq" | "jQuery") echo "jQuery added. - https://unpkg.com/jQuery"; 
+        ("jq" | "jQuery") echo "jQuery being added. - https://unpkg.com/jQuery"; 
         url="$(curl -Ls -o /dev/null -w %{url_effective} https://unpkg.com/jQuery)";
-        curl "${url}" > jQuery.js;
+        curl "${url}" > js/jQuery.js;
         printf "\n\t\t<script src=\"js/jQuery.js\"></script>" >> index.html;
         echo "-------------------------------------";;
 
-        ("bb" | "backbone") echo "Backbone added. - https://unpkg.com/backbone"; 
+        ("bb" | "backbone") echo "Backbone being added. - https://unpkg.com/backbone"; 
         url="$(curl -Ls -o /dev/null -w %{url_effective} https://unpkg.com/backbone)";
-        curl "${url}" > backbone.js;
+        curl "${url}" > js/backbone.js;
          printf "\n\t\t<script src=\"js/backbone.js\"></script>" >> index.html;
          echo "-------------------------------------";;
 
-        ("us" | "underscore") echo "Underscore added. - https://unpkg.com/underscore"; 
+        ("us" | "underscore") echo "Underscore being added. - https://unpkg.com/underscore"; 
         url="$(curl -Ls -o /dev/null -w %{url_effective} https://unpkg.com/underscore)";
-        curl "${url}" > underscore.js;
+        curl "${url}" > js/underscore.js;
  
         printf "\n\t\t<script src=\"js/underscore.js\"></script>" >> index.html;
         echo "-------------------------------------";;
 
-        ("d3") echo "D3 added. - https://unpkg.com/d3."; 
+        ("d3") echo "D3 being added. - https://unpkg.com/d3."; 
         url="$(curl -Ls -o /dev/null -w %{url_effective} https://unpkg.com/d3)";
-        curl "${url}" > d3.js;
+        curl "${url}" > js/d3.js;
         printf "\n\t\t<script src=\"js/d3.js\"></script>" >> index.html;
         echo "-------------------------------------";;
 
-        ("3JS" | "3" | "three") echo "3JS added. - https://unpkg.com/three"; 
+        ("3JS" | "3" | "three") echo "3JS being added. - https://unpkg.com/three"; 
         url="$(curl -Ls -o /dev/null -w %{url_effective} https://unpkg.com/three)";
-        curl "${url}" > THREE.js;
+        curl "${url}" > js/THREE.js;
         printf "\n\t\t<script src=\"js/THREE.js\"></script>" >> index.html;
         echo "-------------------------------------";;
 
-        ("react") echo "React added. But why? - https://unpkg.com/react/dist/react.js"; 
+        ("react") echo "React being added. But why? - https://unpkg.com/react/dist/react.js"; 
         url="$(curl -Ls -o /dev/null -w %{url_effective} https://unpkg.com/react/dist/react.js)";
-        curl "${url}" > react.js;
+        curl "${url}" > js/react.js;
         printf "\n\t\t<script src=\"js/react.js\"></script>" >> index.html;
         echo "-------------------------------------";;
 
-        ("reactdom" | "rctdm" | "dom" | "rdom") echo "ReactDOM added. - https://unpkg.com/react-dom/dist/react-dom.js";
+        ("reactdom" | "rctdm" | "dom" | "rdom") echo "ReactDOM being added. - https://unpkg.com/react-dom/dist/react-dom.js";
         url="$(curl -Ls -o /dev/null -w %{url_effective} https://unpkg.com/react-dom/dist/react-dom.js)";
-        curl "${url}" > react-dom.js;
+        curl "${url}" > js/react-dom.js;
         printf "\n\t\t<script src=\"js/react-dom.js\"></script>" >> index.html;
         echo "-------------------------------------";;
 
-        ("redux") echo "Redux added. - https://unpkg.com/redux/dist/redux"; 
+        ("redux") echo "Redux being added. - https://unpkg.com/redux/dist/redux"; 
         url="$(curl -Ls -o /dev/null -w %{url_effective} https://unpkg.com/redux/dist/redux)";
-        curl "${url}" > redux.js;
+        curl "${url}" > js/redux.js;
         printf "\n\t\t<script src=\"js/redux.js\"></script>" >> index.html;
         echo "-------------------------------------";;
 
-        ("gsap" | "greensocks" | "greensock" | "green" | "gs" | "green_socks" | "green_sock") echo "GreenSock added. - https://unpkg.com/gsap"; 
+        ("gsap" | "greensocks" | "greensock" | "green" | "gs" | "green_socks" | "green_sock") echo "GreenSock being added. - https://unpkg.com/gsap"; 
         url="$(curl -Ls -o /dev/null -w %{url_effective} https://unpkg.com/gsap)";
-        curl "${url}" > greensock.js;
+        curl "${url}" > js/greensock.js;
         printf "\n\t\t<script src=\"js/greensock.js\"></script>" >> index.html;
         echo "-------------------------------------";;
 
-        ("ember" | "mbr") echo "Ember added. - https://unpkg.com/ember-source/dist/ember.min.js"; 
+        ("ember" | "mbr") echo "Ember being added. - https://unpkg.com/ember-source/dist/ember.min.js"; 
         url="$(curl -Ls -o /dev/null -w %{url_effective} https://unpkg.com/ember-source/dist/ember.min.js)";
-        curl "${url}" > ember.js;
+        curl "${url}" > js/ember.js;
         printf "\n\t\t<script src=\"js/ember.js\"></script>" >> index.html;
         echo "-------------------------------------";;
 
-        ("paper" | "pjs" | "paperjs") echo "PaperJS added. - https://unpkg.com/paper/dist/paper-full.js"; 
+        ("paper" | "pjs" | "paperjs") echo "PaperJS being added. - https://unpkg.com/paper/dist/paper-full.js"; 
         url="$(curl -Ls -o /dev/null -w %{url_effective} https://unpkg.com/paper/dist/paper-full.js)";
-        curl "${url}" > paper.js;
+        curl "${url}" > js/paper.js;
         printf "\n\t\t<script src=\"js/paper.js\"></script>" >> index.html;
         echo "-------------------------------------";;
 
-        ("phaser" | "phsr" ) echo "Phaser 2 added. - https://unpkg.com/phaser/dist/p2.js"; 
+        ("phaser" | "phsr" ) echo "Phaser 2 being added. - https://unpkg.com/phaser/dist/p2.js"; 
         url="$(curl -Ls -o /dev/null -w %{url_effective} https://unpkg.com/phaser/dist/p2.js)";
-        curl "${url}" > phaser2.js;
+        curl "${url}" > js/phaser2.js;
         printf "\n\t\t<script src=\"js/phaser2.js\"></script>" >> index.html;
         echo "-------------------------------------";;
 
-        ("vue") echo "Vue added. - https://unpkg.com/vue/dist/vue.js"; 
+        ("vue") echo "Vue being added. - https://unpkg.com/vue/dist/vue.js"; 
         url="$(curl -Ls -o /dev/null -w %{url_effective} https://unpkg.com/vue/dist/vue.js)";
-        curl "${url}" > vue.js;
+        curl "${url}" > js/vue.js;
         printf "\n\t\t<script src=\"js/vue.js\"></script>" >> index.html;;
         (*) echo "Unknown library.";
         echo "-------------------------------------";;
       esac
     done
 
-
     printf "\n\t\t<script src=\"js/main.js\"></script>
     <link rel=\"stylesheet\" href=\"css/style.css\">
   </head>
   <body>
+
   </body>
 </html>" >> index.html
 

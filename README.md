@@ -21,4 +21,4 @@ Useage:
 
 `mks folder_name jq us bb` will do the same as above, but download and link the libraries you tell it to (in this case, jQuery, Underscore and Backbone). 
 
-It is very flexible with library names, ie jQuery (or any case variation thereof) and the shorthand of jq work interchangeably, it also accepts an unlimited number of parameters.
+It is very flexible with library names, ie jQuery (or any case variation thereof) and the shorthand of jq work interchangeably, it also accepts an unlimited number of parameters (ie: `mks myFile us bb jq` will include underscore, backbone & jQuery).
